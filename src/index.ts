@@ -5,18 +5,18 @@ import "hardhat/types/config";
 // We need to declare an extension to the HardhatConfig type to add our plugin's config.
 declare module "hardhat/types/config" {
   interface HardhatNetworkUserConfig {
-    tendrlySignerAddress?: string[];
+    tenderlySignerAddress?: string[];
   }
 
   interface HardhatNetworkConfig {
-    tendrlySignerAddress?: string[];
+    tenderlySignerAddress?: string[];
   }
 
   interface HttpNetworkUserConfig {
-    tendrlySignerAddress?: string[];
+    tenderlySignerAddress?: string[];
   }
   interface HttpNetworkConfig {
-    tendrlySignerAddress?: string;
+    tenderlySignerAddress?: string;
   }
 
   interface HardhatUserConfig {}
@@ -26,18 +26,18 @@ declare module "hardhat/types/config" {
 
 extendConfig((config, userConfig) => {
   for (const networkName of Object.keys(config.networks)) {
-    config.networks[networkName].tendrlySignerAddress =
-      userConfig.networks?.[networkName]?.tendrlySignerAddress;
+    config.networks[networkName].tenderlySignerAddress =
+      userConfig.networks?.[networkName]?.tenderlySignerAddress;
   }
 });
 
 extendProvider(async (provider, config, network) => {
   const { TenderlySignerProvider } = await import("./tenderly-sign-provider");
-  if (!config.networks[network].tendrlySignerAddress) {
+  if (!config.networks[network].tenderlySignerAddress) {
     return provider;
   }
   return new TenderlySignerProvider(
-    config.networks[network].tendrlySignerAddress as string,
+    config.networks[network].tenderlySignerAddress as string,
     provider,
   );
 });
