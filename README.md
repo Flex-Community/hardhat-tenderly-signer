@@ -5,7 +5,7 @@ A Hardhat plugin to submit unsigned transactions to Tenderly.
 # Installation
 
 ```bash
-yarn add git+https://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:x-oauth-basic@github.com/Flex-Community/hardhat-tenderly-signer.git#main
+yarn add https://github.com/Flex-Community/hardhat-tenderly-signer.git
 ```
 
 # Usage (Example only)
