@@ -36,6 +36,8 @@ module.exports = {
     tenderly: {
       url: "https://virtual.base.rpc.tenderly.co/...",
       tenderlySignerAddress: "0x1111111222233333333333333333333333333333", // Enable transaction without signing
+      // Remove accounts field
+      // accounts: [...] - 
     },
   },
 };
