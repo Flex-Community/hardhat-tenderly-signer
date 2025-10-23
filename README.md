@@ -1,6 +1,6 @@
 # []()hardhat-tenderly-signer
 
-Hardhat plugin for sending transactions for Tenderly without signature
+A Hardhat plugin to submit unsigned transactions to Tenderly.
 
 # Installation
 
