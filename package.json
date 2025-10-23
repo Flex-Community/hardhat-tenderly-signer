@@ -1,5 +1,5 @@
 {
-  "name": "@flexcommunity/hardhat-browser-signer",
+  "name": "@flex-community/hardhat-browser-signer",
   "version": "0.0.1",
   "description": "A Hardhat plugin to submit unsigned transactions to Tenderly.",
   "main": "dist/index.js",
@@ -9,13 +9,9 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "test": "mocha --recursive \"test/**/*.ts\" -c --exit",
     "clean": "rimraf dist tsconfig.tsbuildinfo",
     "format": "prettier . --write",
     "build": "npm run clean && tsc",
-    "dev": "vite",
-    "vite-build": "vite build --sourcemap true",
-    "vite-preview": "vite preview",
     "postinstall": "npm run build"
   },
   "repository": {
