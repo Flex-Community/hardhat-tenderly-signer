@@ -1,5 +1,5 @@
 {
-  "name": "@flex-community/hardhat-browser-signer",
+  "name": "@flex-community/hardhat-tenderly-signer",
   "version": "0.0.1",
   "description": "A Hardhat plugin to submit unsigned transactions to Tenderly.",
   "main": "dist/index.js",
