@@ -5,15 +5,15 @@ import "hardhat/types/config";
 // We need to declare an extension to the HardhatConfig type to add our plugin's config.
 declare module "hardhat/types/config" {
   interface HardhatNetworkUserConfig {
-    tenderlySignerAddress?: string[];
+    tenderlySignerAddress?: string;
   }
 
   interface HardhatNetworkConfig {
-    tenderlySignerAddress?: string[];
+    tenderlySignerAddress?: string;
   }
 
   interface HttpNetworkUserConfig {
-    tenderlySignerAddress?: string[];
+    tenderlySignerAddress?: string;
   }
   interface HttpNetworkConfig {
     tenderlySignerAddress?: string;
